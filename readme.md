@@ -124,7 +124,9 @@ cookies to request Colab instances using your account. **Save the file in `cooki
     ssh vps-user@server_domain -p server_ssh_port -i ./ssh_keys/colab_vps
     tmux a # Opening the server console
     ```
-    If you need root access, replace `vps-user` with  `root`
+    Note: If you need root access, replace `vps-user` with  `root`
+    Note: If you are accessing Minecraft or SSH from the forwarding server, replace `server_domain` by `localhost`
+
 
 ## Future Work
 

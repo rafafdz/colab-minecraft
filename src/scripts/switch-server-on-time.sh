@@ -27,11 +27,10 @@ for server_file in $DIR/../../servers/json/*.json; do
     fi
 
     # Schedule new hour
-    log_msg "Time to reset! Executing sequence Forking!. Server file $server_file_name"
+    log_msg "Time to reset! Forking for running in parallel. Check the logs for updates. Server file $server_file_name"
         
     echo "Time to reset on server $server_name"
-    # switch_main $server_file_name --update-hour > /dev/null 2>&1 &
-    switch_main $server_file_name --update-hour
+    switch_main $server_file_name --update-hour > /dev/null 2>&1 &
 
     echo "Sleeping 5 secs to avoid Same colab sheet problems"
     sleep 5

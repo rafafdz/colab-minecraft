@@ -6,6 +6,11 @@ DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd)"
 
 headless=$1
 
+ssh_port_reverse=$(read_json_value "$DIR/../../config/config.json" server_ssh_port)
+reverse_user=$(read_json_value "$DIR/../../config/config.json" server_user)
+reverse_password=$(read_json_value "$DIR/../../config/config.json" server_pass)
+reverse_domain=$(read_json_value "$DIR/../../config/config.json" server_domain)
+
 # Checks if port is running
 check_service_port() {
     netstat -tupln 2> /dev/null | grep ":$1" > /dev/null
@@ -107,7 +112,7 @@ get_new_server(){
     pkill -f -9 colab-robot
     cd "$DIR/../colab-robot"
     # Run in headless mode when in production!
-    if [ "$headless" = true ]; then
+    if [ "$headless" = "True" ]; then
         xvfb-run -a $(which node) start-vps.js -u -p $target_port -c $cookie_file \
         --production 2>&1 | tee -a "$LOGFILE"
     else
