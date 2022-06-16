@@ -1,0 +1,8 @@
+{
+    "name": "example-server",
+    "ssh-port": 4242, 
+    "ssh-switch-port": 4243,
+    "minecraft-port": 25565,
+    "cookie-file": "cookies.json",
+    "next-reset-hour": 18
+}

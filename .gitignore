@@ -1,0 +1,10 @@
+node_modules
+
+src/colab-robot/work
+src/colab-robot/cookies
+src/colab-robot/screenshots
+cookies/cookies.json
+*.txt
+*.log
+*.zip
+*.tar.gz

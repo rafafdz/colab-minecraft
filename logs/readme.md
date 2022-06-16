@@ -1,0 +1,1 @@
+Here you can see the log of each server deploy and switch

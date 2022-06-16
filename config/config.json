@@ -1,0 +1,8 @@
+{
+    "headless" : false,
+    "server_user" : "my-user",
+    "server_pass" : "my-password", 
+    "server_ssh_port" : 22,
+    "server_domain": "your.public.ip",
+    "webserver_port" : 8888
+}
