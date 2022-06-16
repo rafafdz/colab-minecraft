@@ -1,6 +1,6 @@
 # colab-minecraft
 
-Google Colab offers a ton of processing power for running Jupyter notebooks. Could this be used to run contrinuously a Minecraft Server and let players connect to it? Spoiler: Yes it can :sunglasses:
+Google Colab offers a ton of processing power for running Jupyter notebooks. Could this be used to run continuously a Minecraft Server and let players connect to it? Spoiler: Yes it can :sunglasses:
 
 > ## March 2021-1 Update
 
@@ -20,7 +20,7 @@ Mostly Curiosity. It was a fun experiment and surprising to find that there are 
 
 ## Fair Warning
 
-Using this script is not against Google TOC, however you are getting close to the limits probably. The usage of this software is under your own responsability. Don't abuse the great service Google Colab is, otherwise, some wise man once said  *"this is why we can't have nice things"*
+Using this script is not against Google TOC, however you are getting close to the limits probably. The usage of this software is under your own responsibility. Don't abuse the great service Google Colab is, otherwise, some wise man once said  *"this is why we can't have nice things"*
 
 ## Requirements
 * A computer running Unix-Like OS (linux, mac os). This will be used as a forwarding server, since you can't open ports on Colab instance.
@@ -39,7 +39,7 @@ You can understand better what this script does with some pseudocode of the proc
 ```
 function deploy:
     Open a webserver and prepare endpoint with payload script
-    Scrape google calab and press connect button
+    Scrape google colab and press connect button
     Enter command on Colab to download payload script from webserver
     Wait until google collab executes script and crates ssh reverse connection to us
     Upload minecraft server to colab instance trough ssh tunnel
@@ -63,10 +63,9 @@ function switch:
 Sidenote: To make it more clear, the "server running colab-minecraft" and "reverse SSH Forward server" are shown as separate, but you should run colab-minecraft in the same forwarding server.
 
 
-
 ## Source
 
-Inside the `src` directory you will two dirs:
+Inside the `src` directory you will see two dirs:
 * `colab-robot`:  Node + Puppeteer implementation to automate the allocation of a new colab instance + SSH server Setup + Reverse SSh Connection
 * `scripts`: Set of Bash Scripts to automate the whole process of deploying a new
 minecraft server in google colab and renewing it before the 12 hour expiration.
@@ -132,5 +131,5 @@ cookies to request Colab instances using your account. **Save the file in `cooki
 
 * If a minecraft server works, any software can. Generalize to deploy arbitrary software. 
 * Try workarounds for the Captcha
-* Automate the google account cookie recolection
+* Automate the google account cookie recollection
 * Use ssh key instead of user + pass to open reverse ssh tunnels from colab instance to forwarding server.
